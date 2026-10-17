@@ -1,0 +1,17 @@
+name: go2rtc (mDNS patch)
+description: go2rtc, mDNS only on networks listed in /config/go2rtc-mdns.txt
+url: https://github.com/MichaelHeissner/go2rtc-addon
+image: ghcr.io/michaelheissner/go2rtc-addon-{arch}
+arch: [ aarch64 ]
+version: 1.9.14
+slug: go2rtc_mdns
+init: false
+startup: system
+host_network: true
+homeassistant_api: true
+video: true
+audio: true
+ingress: true
+ingress_port: 1984
+panel_icon: mdi:camera-wireless
+map: [ "config:rw", "media", "ssl" ]
